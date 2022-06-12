@@ -1,4 +1,6 @@
-#Function to sort array
+# Time complexity -> O(n), Space complexity -> O(1)
+
+# Function to sort array
 def sort012(arr, arr_size):
 	lo = 0
 	mid = 0
@@ -16,7 +18,7 @@ def sort012(arr, arr_size):
 			hi = hi - 1
 	return arr
 
-#Driver code
+# Driver code
 arr = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
 arr_size = len(arr)
 a = sort012(arr, arr_size)
