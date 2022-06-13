@@ -1,5 +1,4 @@
 def sort0(arr, n):
-	
 	cnt = 0
 	for i in range(n):
 		if arr[i] != 0:
