@@ -19,7 +19,7 @@ def findNextNumber(arr, n):
 	for j in range(i):
 		x = x * 10 + arr[j]
 
-	arr = sorted(arr[i:])
+	arr = sorted(arr[i:])                      # arr = arr[:i] + sorted(arr[i:]) # print(arr)
 
 	for j in range(n - i):
 		x = x * 10 + arr[j]
