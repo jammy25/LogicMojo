@@ -22,8 +22,8 @@ def jump(arr, n):
 	return jump
 
 # Driver code
-# arr = [2, 3, 1, 1, 4]
-arr = [3,2,1,0,4]
+arr = [2, 3, 1, 1, 4]
+# arr = [3,2,1,0,4]
 n = len(arr)
 x = jump(arr, n)
 print(x)
