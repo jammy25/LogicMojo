@@ -4,10 +4,10 @@ def findPlatform(arrival, departure, n):
 
 	i = 0
 	j = 0
-	platform_needed = 1
-	min_platform = 1
-	while i < n and j < n:
-	    
+	platform_needed = 0
+	min_platform = 0
+	
+	while i < n and j < n:    
 	    if arrival[i] <= departure[j]:
 	        platform_needed += 1
 	        i += 1
