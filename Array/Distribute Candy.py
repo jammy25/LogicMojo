@@ -1,11 +1,13 @@
 def countCandies(arr, n):
 	if n == 0:
-		return 0
+		return 0	
 	
-	sum = 0
-	left2right = [0] * n
-	left2right[0] = 1
+	# left2right = [0] * n            # for creating an empty list of index n.
+	left2right = list(range(n))
 	right2left = [0] * n
+
+	sum = 0
+	left2right[0] = 1
 	right2left[n - 1] = 1
 
 	for i in range(1, n):
