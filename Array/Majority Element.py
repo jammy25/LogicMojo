@@ -1,3 +1,5 @@
+# Time Complexity --> O(n*n)
+# Space Complexity --> O(1)
 def majorityElement(arr, n):
 
 	maxCount = 0
@@ -18,8 +20,10 @@ def majorityElement(arr, n):
 	else:
 		print("No majority element")
 
-# Driver Code
+# Driver_Code
 # arr = [1, 8, 7, 4, 1, 2, 2, 2, 2, 2, 2 ]
 arr = [3,2,3]
 n = len(arr)
+
+# Function_call
 majorityElement(arr, n)
