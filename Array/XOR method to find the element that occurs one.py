@@ -1,4 +1,4 @@
-def findSingle( arr, n): 
+def findSingle(arr, n): 
     
     result = arr[0]
 
