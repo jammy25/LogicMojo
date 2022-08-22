@@ -6,70 +6,35 @@ class Node:
 def inorder(root):
 	if root:
 		inorder(root.left)
-		print(root.data, end = ' -> ')
+		print(root.data, end = ' ')
 		inorder(root.right)
 
-def delete(root, data, value):
-	if root is None:
+def delete(root, key):
+	if not root:
 		return root
 
-	if (root.data > value):
-		if root.left:
-			root.left = delete(root.left, root.data, value)
-		else:
-			print("Given node is not present")
-	# return root
+	if root.data > key:
+		root.left = delete(root.left, key)
+	elif root.data < key:
+		root.right = delete(root.right, key)
 
-	if (root.data < value):
-		if root.right:
-			root.right = delete(root.right, value)
-		else:
-			print("Given node is not present")
-	
-
-	# If the root node is a leaf node
-	# if not root.left and not root.right:
-	# 	return None
-
-	# If only one child exist
-	else:	
+	else:
+		if not root.left and not root.right:
+			return None
 		if not root.left:
-			temp = root.right
-			root = None
-			return temp
-		if (root.right is None):
-			temp = root.left
-			root = None
-			return temp
+			return root.right
+		if not root.right:
+			return root.left
 
-		node = root.left
-		while node.left:
-			node = node.left
-		root.data = node.data
-		root.right = delete(node.data, value)
+		temp = root.left
+		while temp.rigth:
+			temp = temp.right
+		temp.data, root.data = root.data, temp.data
+		root.left = delete(root.left, temp.data)
 	return root
-
-	# # If both child exist
-	# succParent = root
-
-	# succ = root.right
-
-	# while succ.left != None:
-	# 	succParent = succ
-	# 	succ = succ.left
-
-	# if succParent != root:
-	# 	succParent.left = succ.right
-	# else:
-	# 	succParent.right = succ.right
-
-	# root.key = succ.key
-
-	# return root
 
 # Driver Code
 if __name__ == '__main__':
-
 	root = Node(50)
 	root.left = Node(30)
 	root.left.left = Node(20)
@@ -78,4 +43,7 @@ if __name__ == '__main__':
 	root.right.left = Node(60)
 	root.right.right = Node(80)
 
-	delete(root, root.data, 30)
+	inorder(root)
+	root = delete(root,40)
+	print()
+	inorder(root)

@@ -20,7 +20,7 @@ def insert(root, key):
 # Function to find the k-th 
 # largest element in a given tree
 def kthLargestUtil(root, k, c):
-	# Base cases, the second condition 
+	# Base cases, the second condition
     # is important to avoid unnecessary
     # recursive calls 
     if root is None or c[0] >= k:
@@ -46,7 +46,7 @@ def kthLargest(root, k):
 	# visited as 0
 	c = [0]
 
-	# Note that c is passed by reference
+	# Note that c is passed by referencesd
 	kthLargestUtil(root, k, c)
 
 # Driver Code
