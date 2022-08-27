@@ -23,7 +23,8 @@ def mergeSort(first, second):
 		first = temp.next
 
 	else:
-		pass
+		temp = second
+		second = temp.next
 
 	new_list = temp
 
@@ -45,7 +46,7 @@ def mergeSort(first, second):
 	if (second == None):
 		temp.next = first
 
-	return new_list.next
+	return new_list
 
 # Driver Code
 
