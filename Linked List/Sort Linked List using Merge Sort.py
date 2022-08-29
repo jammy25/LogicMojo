@@ -17,51 +17,51 @@ class LinkedList:
 			curr_node = curr_node.next
 		curr_node.next = new_node
 
-		def mergeSort(node):
-			if (node == None or node.next == None):
+	def mergeSort(self, node):
+		if (node == None or node.next == None):
 
-				return node
+			return node
 
-			middle = self.getMiddle(node)
-			middle_next = middle.next
+		middle = self.getMiddle(node)
+		middle_next = middle.next
 
-			middle.next = None
+		middle.next = None
 
-			left = self.mergeSort(node)
-			right = self.mergeSort(middle_next)
+		left = self.mergeSort(node)
+		right = self.mergeSort(middle_next)
 
-			sortedList = self.sortedMerge(left, right)
-			return sortedMerge
+		sortedList = self.sortedMerge(left, right)
+		return sortedList
 
-		def sortedMerge(self, first, second):
+	def sortedMerge(self, first, second):
 
-			temp = None
+		temp = None
 
-			if first == None:
-				return second
-			if second == None:
-				return first
+		if first == None:
+			return second
+		if second == None:
+			return first
 
-			if first.data <= second.data:
-				temp = first
-				temp.next = self.sortedMerge(first.next, second)
+		if first.data <= second.data:
+			temp = first
+			temp.next = self.sortedMerge(first.next, second)
 
-			else:
-				temp = second
-				temp.next = self.sortedMerge(first, second.next)
-			return temp
+		else:
+			temp = second
+			temp.next = self.sortedMerge(first, second.next)
+		return temp
 
-		def getMiddle(self, head):
-			if (head == None):
-				return head
-			slow = head
-			fast = head
+	def getMiddle(self, head):
+		if (head == None):
+			return head
+		slow = head
+		fast = head
 
-			while (fast.next != None and fast.next.next != None):
-				slow = slow.next
-				fast = fast.next.next
+		while (fast.next != None and fast.next.next != None):
+			slow = slow.next
+			fast = fast.next.next
 
-			return slow
+		return slow
 
 def print_LL(head):
 	if head is None:
@@ -87,5 +87,8 @@ if __name__ == '__main__':
 	list1.insert(3)
 	list1.insert(7)
 
-	list1.head = list1.mergeSort(list1.head)
 	print_LL(list1.head)
+
+	print("Sorted Linked List is: ")
+	list1.head1 = list1.mergeSort(list1.head)
+	print_LL(list1.head1)
