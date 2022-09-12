@@ -1,8 +1,8 @@
 # function which generates all possible n pairs of balanced parentheses.
 # open : count of the number of open parentheses used in generating the current string s.
 # close : count of the number of closed parentheses used in generating the current string s.
-# s : currently generated string/
-# ans : a vector of strings to store all the valid parentheses.
+# s : currently generated string.
+# res : a vector of strings to store all the valid parentheses.
 
 def generateParenthesis(n, open, close, s, res):
 
