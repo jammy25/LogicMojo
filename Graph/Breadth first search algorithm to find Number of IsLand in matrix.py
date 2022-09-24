@@ -1,4 +1,5 @@
 from collections import deque
+
 row = [-1, -1, -1, 0, 1, 0, 1, 1]
 col = [-1, 1, 0, -1, -1, 1, 0, 1]
 
