@@ -31,7 +31,7 @@ def rotten_oranges(matrix):
 
 if __name__ == '__main__':
 
-	tc = [[2, 2, 1], [1, 1, 0], [0, 1, 1]]
+	tc = [[[2, 1, 1], [1, 1, 0], [0, 1, 1]]]
 
 	for matrix in tc:
 		print(rotten_oranges(matrix))
